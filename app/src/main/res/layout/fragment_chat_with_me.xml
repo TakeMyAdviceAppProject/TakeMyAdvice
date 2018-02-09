@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lightdance.takemyadvice.page.chatwithme.fragment.ChatWithMeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <Button
+        android:id="@+id/btn_envaluate"
+        android:layout_width="152dp"
+        android:layout_height="206dp"
+        android:layout_gravity="bottom|start"
+        android:text="评价" />
+
+    <Button
+        android:id="@+id/btn_typing"
+        android:layout_width="152dp"
+        android:layout_height="206dp"
+        android:layout_gravity="bottom|end"
+        android:text="聊一聊" />
+
+</FrameLayout>

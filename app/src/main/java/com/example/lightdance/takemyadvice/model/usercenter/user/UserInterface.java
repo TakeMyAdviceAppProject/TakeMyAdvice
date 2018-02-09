@@ -1,21 +1,32 @@
 package com.example.lightdance.takemyadvice.model.usercenter.user;
 
-import com.example.lightdance.takemyadvice.model.usercenter.user.bean.Userbean;
+import com.example.lightdance.takemyadvice.model.usercenter.user.bean.UserBean;
 
 /**
+ * 有关用户信息的方法接口
  * @date 2018/2/2.
  * @author LightDance
- * @description 有关用户信息的方法接口
  */
 
 public interface UserInterface {
-    public boolean login(Userbean user);
+    boolean login(UserBean user);
 
-    public void signup(Userbean user);
+    void signup(UserBean user);
 
     //TODO 若干个类似方法以编辑个人资料
 
-    public boolean updateXX(Userbean user);
+    boolean updateXX(UserBean user);
 
-    public Userbean getUserInfo(Userbean user);
+    /**
+     * 用只有id的UserBean获取用户信息
+     * @param user 封装userid
+     * @return 信息完全的UserBean
+     */
+    UserBean getUserInfo(UserBean user);
+
+    /**
+     * 获取当前登录的用户信息，游客身份暂定返回值为null
+     * @return 当前登录的用户信息
+     */
+    UserBean getLogedUserInfo();
 }

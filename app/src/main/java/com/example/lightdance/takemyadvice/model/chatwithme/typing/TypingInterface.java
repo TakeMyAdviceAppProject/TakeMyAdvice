@@ -6,5 +6,6 @@ package com.example.lightdance.takemyadvice.model.chatwithme.typing;
  * @date 2018/2/5.
  */
 
-interface TypingInterface {
+public interface TypingInterface {
+
 }

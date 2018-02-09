@@ -1,15 +1,15 @@
 package com.example.lightdance.takemyadvice.model.usercenter.user.bean;
 
 /**
+ * 存放当前登录用户信息的实体类
  * @date 2018/2/2.
  * @author LightDance
- * @description 存放当前登录用户信息的实体类
  */
 
-public class Userbean {
+public class UserBean {
 
     /**
-     * @param userlevel 美食等级，小白美食家啥的
+     * userlevel： 美食等级，小白美食家啥的
      */
     private String userLevel;
     private String nickName;
@@ -18,9 +18,9 @@ public class Userbean {
 
     /**
      * 单个参数的构造方法,用途之一是通过用户id查询用户全信息
-     * @param userId
+     * @param userId 用户id
      */
-    public Userbean(String userId) {
+    public UserBean(String userId) {
         this.userId = userId;
     }
 

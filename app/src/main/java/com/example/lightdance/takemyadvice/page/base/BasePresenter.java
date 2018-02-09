@@ -1,9 +1,9 @@
 package com.example.lightdance.takemyadvice.page.base;
 
 /**
+ * presenter的基类
  * @author  LightDance
  * @date 2018/2/2.
- * @description presenter的基类
  */
 
 public interface BasePresenter {
