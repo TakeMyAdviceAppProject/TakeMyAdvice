@@ -1,5 +1,6 @@
 package com.example.lightdance.takemyadvice.model.chatwithme;
 
+import com.example.lightdance.takemyadvice.model.base.LoggedUser;
 import com.example.lightdance.takemyadvice.model.usercenter.user.bean.UserBean;
 
 /**
@@ -10,7 +11,11 @@ import com.example.lightdance.takemyadvice.model.usercenter.user.bean.UserBean;
 
 public class ChatWithMeLogic implements ChatWithMeInterface {
     @Override
-    public UserBean getLogedUserInfo() {
-        return null;
+    public void getLogedUserInfo(GetMessageListener listener) {
+        if (LoggedUser.isLogged){
+            listener.onSuccess(LoggedUser.loggedUserBean);
+        }else {
+            listener.onFailure();
+        }
     }
 }

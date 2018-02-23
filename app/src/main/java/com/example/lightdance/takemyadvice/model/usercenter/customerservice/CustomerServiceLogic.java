@@ -8,12 +8,12 @@ package com.example.lightdance.takemyadvice.model.usercenter.customerservice;
 
 public class CustomerServiceLogic implements CustomerServiceInterface {
     @Override
-    public String getContactWay() {
-        return null;
+    public void getContactWay(GetContactListener listener) {
+
     }
 
     @Override
-    public void callServiceCenter() {
+    public void callServiceCenter(OnCallListener listene) {
 
     }
 }

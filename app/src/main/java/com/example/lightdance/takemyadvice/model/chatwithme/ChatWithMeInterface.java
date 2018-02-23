@@ -9,9 +9,22 @@ import com.example.lightdance.takemyadvice.model.usercenter.user.bean.UserBean;
  */
 
 public interface ChatWithMeInterface {
+
+    interface GetMessageListener {
+        /**
+         * 成功获取用户信息
+         * @param user 用户信息
+         */
+        void onSuccess(UserBean user);
+
+        /**
+         * 获取用户信息失败或为游客身份
+         */
+        void onFailure();
+    }
     /**
      * 加载显示用户头像和用户名
-     * @return 当前登录对象信息
      */
-    UserBean getLogedUserInfo();
+    void getLogedUserInfo(GetMessageListener listener);
+
 }

@@ -1,4 +1,4 @@
-package com.example.lightdance.takemyadvice.model.understandme.cuisinerecommend.api;
+package com.example.lightdance.takemyadvice.model.understandme.cuisinerecommend.bean;
 
 /**
  * 封装的推荐菜实体类

@@ -1,7 +1,5 @@
 package com.example.lightdance.takemyadvice.model.usercenter.likes;
 
-import java.util.List;
-
 /**
  * 点赞模块的实现类
  * @author LightDance
@@ -10,22 +8,22 @@ import java.util.List;
 
 public class LikesLogic implements LikesInterface {
     @Override
-    public GeneralLikesBean getGeneralLikesSituation(String userId) {
-        return null;
+    public void getGeneralLikesSituation(String userId, GeneralLikesListener listener) {
+
     }
 
     @Override
-    public List<DetailLikesBean> getDetailLikesSituationList(String userId) {
-        return null;
+    public void getDetailLikesSituationList(String userId, DetailLikesListener listener) {
+
     }
 
     @Override
-    public boolean likeYou(String operatorId, String targetId) {
-        return false;
+    public void likeYou(String operatorId, String targetId, OnLikeListener listener) {
+
     }
 
     @Override
-    public boolean likeCancle(String operatorId, String targetId) {
-        return false;
+    public void likeCancle(String operatorId, String targetId, OnLikeListener listener) {
+
     }
 }

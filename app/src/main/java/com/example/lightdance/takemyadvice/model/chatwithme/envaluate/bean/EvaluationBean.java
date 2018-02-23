@@ -6,11 +6,18 @@ package com.example.lightdance.takemyadvice.model.chatwithme.envaluate.bean;
  * @date 2018/2/4.
  */
 
-public class Envaluationbean {
+public class EvaluationBean {
     private boolean isReply;
-    private int envaluationId;
+    private int evaluationId;
     private String publisherId;
     private String content;
+
+    public EvaluationBean(boolean isReply, int evaluationId, String publisherId, String content) {
+        this.isReply = isReply;
+        this.evaluationId = evaluationId;
+        this.publisherId = publisherId;
+        this.content = content;
+    }
 
     public boolean isReply() {
         return isReply;
@@ -20,12 +27,12 @@ public class Envaluationbean {
         isReply = reply;
     }
 
-    public int getEnvaluationId() {
-        return envaluationId;
+    public int getEvaluationId() {
+        return evaluationId;
     }
 
-    public void setEnvaluationId(int envaluationId) {
-        this.envaluationId = envaluationId;
+    public void setEvaluationId(int evaluationId) {
+        this.evaluationId = evaluationId;
     }
 
     public String getPublisherId() {

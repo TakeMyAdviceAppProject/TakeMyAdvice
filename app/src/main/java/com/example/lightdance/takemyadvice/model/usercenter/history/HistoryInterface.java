@@ -1,9 +1,5 @@
 package com.example.lightdance.takemyadvice.model.usercenter.history;
 
-import com.example.lightdance.takemyadvice.model.usercenter.history.bean.HistoryBean;
-
-import java.util.List;
-
 /**
  * 历史记录（足迹）接口类
  * @author LightDance
@@ -11,8 +7,24 @@ import java.util.List;
  */
 
 public interface HistoryInterface {
+    interface OperateListener{
+        /**
+         * 操作成功
+         */
+        void onSuccess();
 
-    List<HistoryBean> getHistoryById(String userId);
+        /**
+         * 操作失败
+         */
+        void onFailure();
+    }
+
+    /**
+     * 通过用户id获取浏览记录
+     * @param userId 用户id
+     * @param listener 回调监听
+     */
+    void getHistoryById(String userId, OperateListener listener);
 
 
 }

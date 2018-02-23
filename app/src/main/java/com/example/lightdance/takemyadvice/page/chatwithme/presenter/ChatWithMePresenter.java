@@ -1,5 +1,6 @@
 package com.example.lightdance.takemyadvice.page.chatwithme.presenter;
 
+import com.example.lightdance.takemyadvice.model.base.LoggedUser;
 import com.example.lightdance.takemyadvice.model.chatwithme.ChatWithMeInterface;
 import com.example.lightdance.takemyadvice.model.chatwithme.ChatWithMeLogic;
 import com.example.lightdance.takemyadvice.model.usercenter.user.bean.UserBean;
@@ -17,17 +18,17 @@ public class ChatWithMePresenter implements ChatWithMeContract.Presenter {
     private ChatWithMeContract.View view;
     @Override
     public void start() {
-        UserBean user = chatWithMeLogic.getLogedUserInfo();
         String userName;
         String userIconId;
-        if(user == null){
+        if(!LoggedUser.isLogged){
             userIconId = "tourist icon id";
             userName = "游客";
         }else{
+            UserBean user = LoggedUser.loggedUserBean;
             userName = user.getNickName();
             userIconId  = user.getUserIconId();
         }
-        view.showUserMsg(userIconId , userName);
+        //view.showUserMsg(userIconId , userName);
     }
 
     @Override

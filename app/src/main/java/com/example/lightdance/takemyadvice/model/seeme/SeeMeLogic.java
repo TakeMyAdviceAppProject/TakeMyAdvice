@@ -7,4 +7,18 @@ package com.example.lightdance.takemyadvice.model.seeme;
  */
 
 public class SeeMeLogic implements SeeMeInterface {
+    @Override
+    public void getCuisineMap() {
+
+    }
+
+    @Override
+    public void getTopCuisine() {
+
+    }
+
+    @Override
+    public void getCommandRestaurant() {
+
+    }
 }
